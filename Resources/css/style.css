@@ -1,0 +1,21 @@
+body {background-color:black;
+      font-family:helvetica;
+      font-size:22px;
+      color:seashell;
+      opacity:0.9;
+      text-align: center;}
+
+#header {display:flex;
+         justify-content:space-between;
+         height:69px;
+         border-bottom:1px solid seashell;
+         padding:0 0 19px 0;
+         opacity:0.5;
+         }
+#logo_container {height:50px;
+                 margin: 0 0 10px 10px;}
+
+#navigation ul li {display:inline-block;
+                   margin:0 0 0 20px;}
+#navigation ul li a {color:seashell;
+                     text-decoration:underline;}
