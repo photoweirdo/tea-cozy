@@ -7,27 +7,82 @@ body {background-color:black;
       opacity:0.9;
       text-align: center;}
 
-#header {display:flex;
-         justify-content:space-between;
+/*css for header*/
+#header_container {position:fixed; width:100%;} /* two containers around the header to create the fixed position and also flex box */
+#header {background:black;
+         display:flex;
+         justify-content:space-between;/* to create the space between the log and the navigation */
+         align-items:center;
          height:69px;
          border-bottom:1px solid seashell;
-         padding:0 0 19px 0;
-
-         }
-#logo_container {height:50px;
-                 margin: 0 0 10px 10px;}
-
+         padding:0 0 0 0;}
+#logo_container { margin:0 0 0 10px;}
+#logo_container img {height:50px;}
 #navigation ul li {display:inline-block;
-                   margin:0 0 0 20px;}
+                   margin:0 10px 0 20px;}
 #navigation ul li a {color:seashell;
                      text-decoration:underline;}
-#mission_background {background-image: url(../images/img-mission-background.jpg);
+
+
+ #container {display:flex;
+            flex-direction:column;
+            justify-content:space-around;
+            align-items:center; } /*with everything but the header and footer.Necessary to create the columns with flex boxes*/
+
+  /*css for the middle area*/
+#mission_background_box {background-image: url(../images/img-mission-background.jpg);
                      width:1200px;
                      height:700px;
                      margin:0 auto;
                      display:flex;
-                                       flex-direction:column;
-                                       align-items:center;
-                                       justify-content:center;}
-#mission-headline {width:1200px;
-                  background-color: black;}
+                     flex-direction:column;
+                     align-items:center;
+                     justify-content:center;}
+#mission-headline {width:1200px; /*this box is necessary in order to move to the middle the h1 and h4 together*/
+                  background-color: black;
+                  padding-bottom: 7px;}
+
+/*css for the box in the middle*/
+#middle_container {width:1000px;
+                  margin:40px 0;
+                  display:flex;
+                  flex-direction:column;
+                  } /*positions the h2,h4 and the div with the images*/
+
+
+#middle_container h4 {margin-top:10px;}
+#images_container {width:1000px;
+                   display:flex;
+                   flex-wrap:wrap;
+                   justify-content:center;}
+.image_box img {margin: 10px 10px;} /*I wrapped in a div each image with its h4 so that they cn be repositioned together*/
+.image_box{padding:10px 0;}
+
+/*css for the box at the bottom*/
+#lower_container {background-image: url(../images/img-locations-background.jpg);width:1200px; height:700px;
+                  padding-top:50px;
+                  margin:0 auto;
+                  display:flex;
+                  flex-direction:column;
+                  align-items:center;
+                  justify-content:center;}
+.box {background:black;
+      width:300px;
+      height:300px;
+      margin:15px 20px 200px;/*200px bottom margin to push up the boxes and the h2 towards the top of the container*/
+      opacity:1;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:space-around;}
+#boxes_container {display:flex;} /*necessary to horizontally position together the three boxes*/
+#contact_info {display:flex;
+               flex-direction:column;
+               align-items:center;
+               justify-content:space-around;
+               background-color:black;
+               width:100%;
+               height:200px;}
+               
+#copyright {text-align:left;
+            margin:0 20px 40px;}
